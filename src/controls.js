@@ -50,8 +50,8 @@ class CameraControls extends EventDispatcher {
 
             _euler.setFromQuaternion(camera.quaternion);
 
-            _euler.y += movementX * 0.004;
-            _euler.x += movementY * 0.004;
+            _euler.y -= movementX * 0.004;
+            _euler.x -= movementY * 0.004;
 
             _euler.x = Math.max(_PI_2 - scope.maxPolarAngle, Math.min(_PI_2 - scope.minPolarAngle, _euler.x));
 
